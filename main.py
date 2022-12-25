@@ -27,7 +27,7 @@ async def demo_get():
     driver.close()
     return homepage
 
-@app.post("/backgroundDemo")
+@app.get("/backgroundDemo")
 async def demo_post(inp: Msg, background_tasks: BackgroundTasks):
     
     background_tasks.add_task(doBackgroundTask, inp)
